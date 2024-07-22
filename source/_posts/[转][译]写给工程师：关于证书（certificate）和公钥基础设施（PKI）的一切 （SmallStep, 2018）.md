@@ -9,8 +9,15 @@ tags:
 - 转载
 ---
 
-> [译文](https://arthurchiao.art/blog/everything-about-pki-zh/)
-> [原文](https://smallstep.com/blog/everything-pki/)
+原作者：MIKE MALONE，发布于：
+
+> [Everything you should know about certificates and PKI but are too afraid to ask](https://smallstep.com/blog/everything-pki/)
+
+译者：ArthurChiao，发布于：
+
+> [[译] 写给工程师：关于证书（certificate）和公钥基础设施（PKI）的一切（SmallStep, 2018）](https://arthurchiao.art/blog/everything-about-pki-zh/)
+
+
 
 <!-- 
 [译] 写给工程师：关于证书（certificate）和公钥基础设施（PKI）的一切（SmallStep, 2018）
