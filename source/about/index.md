@@ -14,4 +14,4 @@ layout: about
 - 和别的程序员一样，总之在寻找和自己契合的项目。
 
 - 目前我正在做：
-  - [Caddy 网站](https://github.com/vitsumoc/website.zh)
+  - [Caddy 网站](https://github.com/vitsumoc/website/tree/zh)
