@@ -69,3 +69,31 @@ tags:
   }
 }
 ```
+
+## 后端服务是 HTTPS
+
+- 需要求改请求头, 否则请求不成功
+
+```caddy
+example.com {
+	reverse_proxy https://example.com {
+		header_up Host {upstream_hostport}
+	}
+}
+```
+
+## 添加前缀, 代理某后端的 GET 请求, 处理路径问题
+
+- `:8090/comm/?p=aaa` -> `https://example.com/index.php?p=aaa`
+- 此处可以使用 `uri[1:]` 语法手动处理 `url`
+
+```caddy
+:8090 {
+  handle_path /comm/* {
+  	rewrite * /index.php{uri[1:]}
+  	reverse_proxy https://example.com {
+  		header_up Host {upstream_hostport}
+  	}
+  }
+}
+```
