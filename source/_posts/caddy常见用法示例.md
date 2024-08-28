@@ -3,9 +3,11 @@ title: Caddy常用配置示例
 url: Caddy常用配置示例
 date: 2024-08-27 09:31:29
 categories:
-- caddy
+- 运维
 tags:
+- 运维
 - caddy
+- 项目实践
 ---
 
 # Caddy常用配置示例
