@@ -1,6 +1,6 @@
 ---
 title: 使用n2n连接不同局域网设备
-url: n2nBeginner
+url: 使用n2n连接不同局域网设备
 date: 2023-12-06 14:37:00
 categories:
 - 网络工具

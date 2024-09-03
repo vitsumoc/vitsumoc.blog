@@ -1,6 +1,6 @@
 ---
 title: "在 Windows 环境使用 proxifyre 代理应用程序"
-url: usingProxifyreInWindows
+url: 在 Windows 环境使用 proxifyre 代理应用程序
 date: 2024-04-15 09:03:38
 categories:
 - 网络工具

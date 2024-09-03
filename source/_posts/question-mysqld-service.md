@@ -1,6 +1,6 @@
 ---
 title: "[问题]Windows环境下nssm注册的mysql服务无法启动"
-url: question-mysqld-service
+url: Windows环境下nssm注册的mysql服务无法启动
 date: 2023-12-15 09:30:00
 categories:
 - 问题

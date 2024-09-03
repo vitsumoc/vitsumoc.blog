@@ -1,6 +1,6 @@
 ---
 title: "在 Ubuntu 22.04 LTS 上使用 BBR"
-url: usingBBRonUbuntu2204
+url: 在 Ubuntu 22.04 LTS 上使用 BBR
 date: 2024-04-11 12:27:40
 categories:
 - 网络工具

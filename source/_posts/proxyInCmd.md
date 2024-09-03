@@ -1,6 +1,6 @@
 ---
 title: 通过proxychains-windows在命令行中使用socks5代理
-url: proxyInCmd
+url: 通过proxychains-windows在命令行中使用socks5代理
 date: 2024-02-18 22:57:51
 categories:
 - 网络工具

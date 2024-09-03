@@ -1,6 +1,6 @@
 ---
 title: "[翻译] n2n 常见问题"
-url: translate-n2n-faq
+url: n2n 常见问题
 date: 2023-12-07 16:55:07
 categories:
 - 网络工具

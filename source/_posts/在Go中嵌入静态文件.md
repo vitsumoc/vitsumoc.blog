@@ -1,6 +1,6 @@
 ---
 title: 在Go中嵌入静态文件
-url: Go-embed
+url: 在Go中嵌入静态文件
 date: 2024-04-25 15:48:11
 categories:
 - Go

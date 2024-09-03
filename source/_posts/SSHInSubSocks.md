@@ -1,6 +1,6 @@
 ---
 title: 使用SSH包装Socks5代理
-url: SSHInSubSocks
+url: 使用SSH包装Socks5代理
 date: 2023-11-22 17:38:25
 categories:
 - 网络编程
