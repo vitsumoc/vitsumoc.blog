@@ -30,7 +30,9 @@ nohup java -jar YongWang-1.0-SNAPSHOT.jar > /dev/null 2>&1 &
 
 因此，将程序注册为服务是一个更好的选择。
 
-# 注册服务
+# 使用 root 用户操作系统级服务
+
+## 注册服务
 
 如果想将我们的程序注册为服务，首先需要编写一个配置文件，这个文件可以放在 `/etc/systemd/system/` 路径下。
 
@@ -54,7 +56,7 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 ```
 
-# 服务管理命令
+## 服务管理命令
 
 后续我们对服务的管理，一般包括：
 
@@ -86,4 +88,32 @@ systemctl enable yongwang
 
 ```bash
 systemctl disable yongwang
+```
+
+# 使用普通用户注册用户级服务
+
+## 注册服务
+
+对于非 root 用户，也可以使用自身的权限注册用户级服务，将配置文件编写在 `/etc/systemd/user/` 路径下：
+
+```text yongwangapp.service
+[Unit]
+Description=YongWang Server
+
+[Service]
+User=lenovo
+Group=lenovo
+WorkingDirectory=/home/lenovo/vc/ywyl/server/
+ExecStart=java -jar YongWang-1.0-SNAPSHOT.jar
+
+[Install]
+WantedBy=multi-user.target
+```
+
+## 服务管理命令
+
+普通用户的服务管理命令与 root 用户相似，但都需要添加 `--user` 参数，例如：
+
+```bash
+systemctl --user start yongwang
 ```
