@@ -99,3 +99,25 @@ example.com {
   }
 }
 ```
+
+# 一些排查问题的方法
+
+使用 `apt install` 安装后，caddy 的服务配置文件默认放置在 `/lib/systemd/system`。
+
+`caddy` 会默认创建一个 `caddy` 用户用来执行服务，并将此用户的 `$HOME` 设置为 `/var/lib/caddy`，这意味着相关的证书、自动存储的配置文件会被保存在这里。
+
+如果是排查和证书相关的问题，使用 `root` 用户和 `caddy` 用户的环境可能不同，此时可以切换到 `caddy` 用户检查：
+
+先使用 `root` 授权，让普通用户也可以使用 `caddy` 程序占用 `80` 和 `443` 端口：
+
+```bash
+setcap 'cap_net_bind_service=+ep' /usr/bin/caddy
+```
+
+再进入 `caddy` 用户，手动运行程序，记得在配置文件前先打开 `debug` 显示：
+
+```bash
+su -s /bin/bash caddy
+cd /etc/caddy
+caddy run -c Caddyfile
+```
