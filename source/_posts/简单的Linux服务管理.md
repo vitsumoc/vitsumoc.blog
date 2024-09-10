@@ -101,8 +101,6 @@ systemctl disable yongwang
 Description=YongWang Server
 
 [Service]
-User=lenovo
-Group=lenovo
 WorkingDirectory=/home/lenovo/vc/ywyl/server/
 ExecStart=java -jar YongWang-1.0-SNAPSHOT.jar
 
