@@ -3,10 +3,11 @@ title: 内网项目添加HTTPS支持
 url: 内网项目添加HTTPS支持
 date: 2024-10-22 10:43:29
 categories:
-- 运维
+- HTTPS
 tags:
+- HTTPS
 - 运维
-- 项目实战
+- 项目实践
 - caddy
 ---
 
