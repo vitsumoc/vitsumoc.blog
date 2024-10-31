@@ -40,7 +40,7 @@ https://192.168.34.197 {
 
 发现只能内网访问，通过 frp 代理地址还是不能访问（只有 HTTP ok，没有内容）。
 
-这一下打破了我原有的想法，我原本以为是网络和 TLS 问题，现在看来不是，然后注意到 `http://192.168.34.197:10443`，我开始怀疑是 caddy 的路由没匹配上。
+这个事实一下就打破了我原有的想法，我原本以为是网络和 TLS 问题，现在看来不是，然后注意到 `http://192.168.34.197:10443`，我开始怀疑是 caddy 的路由没匹配上。
 
 改成 `:10443` 后，frp 可用了。
 
@@ -61,10 +61,6 @@ https://192.168.34.197 {
 
 # 总结
 
-> caddy 中配置的 address 必须和用户在浏览器输入的地址相同。
+其实 Caddy 的[文档](https://caddyserver.com/docs/caddyfile/concepts#addresses)中早有说明：
 
-我怀疑是 caddy 会根据请求中的 Host 做请求匹配，如果在 address 中配置了完整的域名，那么就必须是能够匹配的请求才会被处理。
-
-由于服务器前面是个纯 NAT 设备，caddy 就是 HTTP 的第一层入口，那么匹配不到 caddy 处理器的请求就没有经过任何处理，只能获得 0 长度的返回。
-
-感觉这个机制和 nginx 中的 server_name 差不多。
+> If you specify a hostname, only requests with a matching `Host` header will be honored. In other words, if the site address is `localhost`, then Caddy will not match requests to `127.0.0.1`.
