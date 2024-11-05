@@ -3,9 +3,8 @@ title: "mysql bin_log 塞满了磁盘"
 url: "mysql bin_log 塞满了磁盘"
 date: 2024-06-26 10:39:35
 categories:
-- 运维
+- 项目实践
 tags:
-- 运维
 - 项目实践
 ---
 

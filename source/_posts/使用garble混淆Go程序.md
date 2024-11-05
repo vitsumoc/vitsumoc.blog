@@ -3,10 +3,10 @@ title: 使用garble混淆Go程序
 url: 使用garble混淆Go程序
 date: 2024-07-02 16:59:54
 categories:
-- 豆知识
-tags:
-- 豆知识
 - Go
+tags:
+- Go
+- 项目实践
 ---
 
 最近在做的一个产品，走的是私有化部署的路线，需要给很多客户部署服务，然后卖 License 的模式。

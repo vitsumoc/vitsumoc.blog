@@ -3,9 +3,10 @@ title: "[译]GP2040-CE FAQ"
 url: "[译]GP2040-CE FAQ"
 date: 2024-07-30 14:27:46
 categories:
-- 手抄报
+- 豆知识
 tags:
-- 手抄报
+- 豆知识
+- 嵌入式
 ---
 
 > [GP2040-CE](https://gp2040-ce.info/) 是一个基于树莓派（或其他） [RP 2040](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html) 微处理器的开源游戏控制器固件项目，支持多种输入模式，适配多个平台。

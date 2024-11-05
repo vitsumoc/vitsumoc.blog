@@ -3,10 +3,10 @@ title: "[转]netperf和iperf网络性能测试小结"
 url: "[转]netperf和iperf网络性能测试小结"
 date: 2024-08-28 11:16:48
 categories:
-- 运维
+- 网络工具
 tags:
+- 网络工具
 - 运维
-- 项目实践
 ---
 
 [原文](https://wsgzao.github.io/post/netperf/)

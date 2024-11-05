@@ -3,9 +3,10 @@ title: 关闭Windows程序弹窗
 url: 关闭Windows程序弹窗
 date: 2024-06-18 17:22:21
 categories:
-- Windows
+- 豆知识
 tags:
-- Windows
+- 豆知识
+- windows
 ---
 
 > 本文记录了一个使用工具寻找弹窗、分析弹窗、修改程序的过程，对于理解 Windows 编程有一些作用

@@ -1,6 +1,6 @@
 ---
-title: SSH握手过程
-url: SSH握手过程
+title: SSH中的握手过程
+url: SSH中的握手过程
 date: 2023-11-20 09:20:06
 categories:
 - 网络编程

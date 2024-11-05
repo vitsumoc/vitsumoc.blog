@@ -3,11 +3,10 @@ title: 在Go中使用lua
 url: 在Go中使用lua
 date: 2023-12-05 11:25:15
 categories:
-- 小玩具
-tags:
-- 小玩具
 - Go
-- 库
+tags:
+- Go
+- lua
 ---
 
 使用```gopher-lua```，在 Go 中使用lua。```gopher-lua``` 项目地址：
