@@ -1,5 +1,5 @@
 ---
-title: "[转][译]写给工程师：关于证书（certificate）和公钥基础设施（PKI）的一切 （SmallStep, 2018）.md"
+title: "[转][译]写给工程师：关于证书（certificate）和公钥基础设施（PKI）的一切 （SmallStep, 2018）"
 url: "[译]写给工程师：关于证书（certificate）和公钥基础设施（PKI）的一切 （SmallStep, 2018）"
 date: 2024-07-22 15:55:29
 categories:
