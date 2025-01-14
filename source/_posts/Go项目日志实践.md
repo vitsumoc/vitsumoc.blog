@@ -125,18 +125,15 @@ func LogPanic() {
 
 ```
 
-DEBUG 等级的日志可以在程序运行时通过 flag 开启，如下：
+在使用日志服务前，需要进行全局初始化：
 
 ```go main.go
-debug := flag.Bool("debug", false, "是否开启调试模式")
-flag.Parse()
-if *debug {
-	vlog.VRunLogLevel = vlog.RL_DEBUG
-}
-
+// ...
+vlog.InitRunLog()
+// ...
 ```
 
-`WebRecovery` 是写给 `gin` 框架的回调，用来在 WEB 过程中 panic 时记录日志，用法如下：
+`WebRecovery` 是写给 `gin` 框架的回调，用来记录 `HTTP` 服务执行过程中发生的 panic，使用时需要配置到 `gin` 框架中，用法如下：
 
 ```go web.go
 r := gin.Default()
@@ -146,7 +143,7 @@ r.Use(vlog.WebRecovery(), gin.LoggerWithConfig(gin.LoggerConfig{
 
 ```
 
-最后，如果程序本身崩溃了，那么也需要记录到日志中：
+如果程序本身崩溃了，那么也需要记录到日志中，可以通过 main 函数的 defer 实现这一点：
 
 ```go main.go
 func main() {
@@ -154,4 +151,22 @@ func main() {
   // 其他初始化
 }
 
+```
+
+DEBUG 等级的日志正常不会被记录或显示，可以在程序运行时通过 flag 开启，如下：
+
+```go main.go
+debug := flag.Bool("debug", false, "是否开启调试模式")
+flag.Parse()
+if *debug {
+	vlog.VRunLogLevel = vlog.RL_DEBUG
+}
+```
+
+最后，我们可以在程序各处埋点，添加不同级别的日志，例如：
+
+```go task.go
+vlog.RunLog(vlog.RL_INFO, "任务线程初始化...")
+// ...
+vlog.RunLog(vlog.RL_ERROR, "[任务循环] License校验失败"+err.Error())
 ```
